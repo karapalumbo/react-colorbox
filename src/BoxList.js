@@ -10,6 +10,10 @@ function BoxList() {
         setBoxes(boxes => [...boxes, box])
     };
 
+    const remove = id => {
+        setBoxes(boxes => boxes.filter(box => box.id !== id))
+    }
+
     const renderBoxes = boxes.map(box => {
         return (
             <Box 
@@ -18,6 +22,7 @@ function BoxList() {
                 backgroundColor={box.backgroundColor}
                 width={box.width}
                 height={box.height}
+                handleRemove={remove}
             />
         )
     })

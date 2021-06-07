@@ -1,14 +1,13 @@
 import React, { useState }from "react";
-import Box from './Box'
 
 
 const NewBoxForm = ({ createBox }) => {
-    const INITIAL_STATE = {     
-        backgroundColor: "",
-        width: "",
-        height: "" };
-    
-    const [formData, setFormData] = useState(INITIAL_STATE);
+  const INITIAL_STATE = {     
+    backgroundColor: "",
+    width: "",
+    height: "" };
+        
+  const [formData, setFormData] = useState(INITIAL_STATE);
 
 
   const handleSubmit = evt => {
