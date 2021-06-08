@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 
 function NewTodoForm({ createTodo }) {
-
   const [todo, setTodo] = useState("");
+  const [edit, setEdit] = useState(false)
 
   const handleSubmit = evt => {
     evt.preventDefault();
